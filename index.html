@@ -6,40 +6,19 @@
     <title>马金良最喜欢庄小晗了</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <!-- <script src="index.js"></script> -->
+    <script src="index.js"></script>
 </head>
 <body>
-    <h2 style="text-align: center;">马金良最喜欢庄小晗了</h2>
-    <br>
-
-    <script>
-        function checkPassword() {
-            // 获取用户输入的密码
-            var password = document.getElementById("password").value;
-
-            // 检查密码是否符合条件，这里简单演示，实际情况应该更加安全
-            if (password === "230118") {
-                // 密码正确，跳转到指定页面
-                window.location.href = "letters/loveletter1.html";
-            } else {
-                // 密码不正确，可以给出相应的提示
-                alert("密码不正确，请重新输入");
-            }
-
-            // 阻止表单提交
-            return false;
-        }
-    </script>
-
-    <form onsubmit="return checkPassword()">
-        <label for="password">请输入密码:</label>
-        <input type="password" id="password" name="password" required>
-        <button type="submit">进入情书页</button>
-    </form>
+    <div class="headline">
+        <a href="index.html">首页</a>
+        <a id="myLink" href="letters/loveletter1.html" onclick="showConfirmation(); return false;" >情书页</a>
+        <a href="#">联系我们</a>
+    </div>
 
     <br>
 
-    <img style="height:200px;width:200px" src="./resource/img/牵手1.jpg" />
+
+    <img style="height:200px;width:200px" src="./resource/img/牵手1.jpg" /><br>
     <img style="height:200px;width:200px" src="./resource/img/牵手2.jpg" />
 </body>
 </html>
