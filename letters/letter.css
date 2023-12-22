@@ -1,6 +1,13 @@
-p {
+.onPCFont {
     width: 60%;
     margin: 0 auto;
     font-family:STSong;
     font-size:18px;
+}
+
+.onMobileFont {
+    width: 90%;
+    margin: 0 auto;
+    font-family: STSong;
+    font-size: 18px;
 }
