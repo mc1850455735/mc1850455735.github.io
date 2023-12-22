@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>马金良最喜欢庄小晗了</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
+    <script src="index.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="headline">
+        <a href="../index.html">首页</a>
+        <a id="myLink" href="../letters/loveletter1.html" onclick="showConfirmation(); return false;" >情书页</a>
+        <a href="main.html">关于我们</a>
+    </div>
+
+    <!-- 滑动显示图片 -->
+    <div id="slider">
+        <div id="slides">
+            <div class="slide">
+                <img src="../resource/img/牵手1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="../resource/img/牵手2.jpg" alt="Slide 2">
+            </div>
+            <!-- <div class="slide">
+                <img src="image3.jpg" alt="Slide 3">
+            </div> -->
+            <!-- 添加更多图片 -->
+        </div>
+
+        <button id="prev" onclick="prevSlide()">&#10094;</button>
+        <button id="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.getElementById('slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+
+            if (index >= totalSlides) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            const translateValue = -currentSlide * 100 + '%';
+            slides.style.transform = 'translateX(' + translateValue + ')';
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+    </script>
+
+</body>
+</html>
