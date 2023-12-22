@@ -8,6 +8,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
+p {
+    padding: 2px 2px;
+}
+
 /* ************************************************************************ */
 .headline{
     background-color:#0ae9e9;
@@ -26,22 +30,41 @@ body {
 
 
 /* ************************************************************************ */
-.onPCFont {
-    width: 60%;
+.onPCFont{
+    width: 65%;
+    margin: 0 auto;
+    padding-top: 2px;
+    background-color: rgb(234, 229, 217);
+    box-shadow: 2px 2px 2px #ddd;
+}
+.onPCFont div {
+    width: 90%;
     margin: 0 auto;
     font-family:STSong;
     font-size:18px;
 }
 
-.onMobileFont {
-    width: 90%;
+.onMobileFont{
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 2px;
+    background-color: rgb(234, 229, 217);
+    box-shadow: #ddd;
+}
+.onMobileFont div {
+    width: 95%;
     margin: 0 auto;
     font-family: STSong;
     font-size: 18px;
 }
 
-/* ************************************************************************ */
+.read_page {
+    background-color: rgb(242, 238, 229);
+}
 
+
+/* ************************************************************************ */
+/* »¬¶¯Í¼Æ¬Õ¹Ê¾ */
 #slider {
     overflow: hidden;
     width: 80%;
