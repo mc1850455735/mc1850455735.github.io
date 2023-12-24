@@ -6,14 +6,56 @@
         <title>马金良最喜欢庄小晗了</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="test.css" />
+        <style>
+            body {
+              display: flex;
+            }
+        
+            #sidebar {
+              width: 200px;
+              height: 100%;
+              background-color: #f1f1f1;
+              padding: 10px;
+            }
+        
+            #content {
+              flex: 1;
+              padding: 10px;
+            }
+        
+            .hidden {
+              display: none;
+            }
+        </style>
+    
     </head>
 
     <body>
-        <div class="headline">
-            <a href="#">首页</a>
-            <a href="#">关于我们</a>
-            <a href="#">服务</a>
-            <a href="#">联系我们</a>
+        <div id="sidebar">
+            <ul>
+              <li><a href="#" onclick="showContent('section1')">部分1</a></li>
+              <li><a href="#" onclick="showContent('section2')">部分2</a></li>
+              <li><a href="#" onclick="showContent('section3')">部分3</a></li>
+            </ul>
         </div>
+          
+        <div id="content">
+            <div id="section1">部分1的内容显示在这里。</div>
+            <div id="section2" class="hidden">部分2的内容显示在这里。</div>
+            <div id="section3" class="hidden">部分3的内容显示在这里。</div>
+        </div>
+        <script>
+            function showContent(sectionId) {
+              // 隐藏所有内容
+              var allSections = document.querySelectorAll('#content > div');
+              allSections.forEach(function(section) {
+                section.classList.add('hidden');
+              });
+          
+              // 显示选择的内容
+              var selectedSection = document.getElementById(sectionId);
+              selectedSection.classList.remove('hidden');
+            }
+        </script>
     </body>
 </html>
