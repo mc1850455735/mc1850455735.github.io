@@ -79,6 +79,12 @@ p {
     border-radius: 5px;
 }
 
+#slider p {
+    padding: 10px 10px; /* 链接内边距 */
+    margin: 0 5px; /* 链接之间的外边距 */
+    font-weight: bold; /* 字体加粗 */
+}
+
 #slides {
     display: flex;
     /* 设置垂直居中 */
