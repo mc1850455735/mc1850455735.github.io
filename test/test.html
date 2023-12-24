@@ -1,61 +1,50 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>马金良最喜欢庄小晗了</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="test.css" />
-        <style>
-            body {
-              display: flex;
-            }
-        
-            #sidebar {
-              width: 200px;
-              height: 100%;
-              background-color: #f1f1f1;
-              padding: 10px;
-            }
-        
-            #content {
-              flex: 1;
-              padding: 10px;
-            }
-        
-            .hidden {
-              display: none;
-            }
-        </style>
-    
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>烟花绽放</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #111;
+    }
 
-    <body>
-        <div id="sidebar">
-            <ul>
-              <li><a href="#" onclick="showContent('section1')">部分1</a></li>
-              <li><a href="#" onclick="showContent('section2')">部分2</a></li>
-              <li><a href="#" onclick="showContent('section3')">部分3</a></li>
-            </ul>
-        </div>
-          
-        <div id="content">
-            <div id="section1">部分1的内容显示在这里。</div>
-            <div id="section2" class="hidden">部分2的内容显示在这里。</div>
-            <div id="section3" class="hidden">部分3的内容显示在这里。</div>
-        </div>
-        <script>
-            function showContent(sectionId) {
-              // 隐藏所有内容
-              var allSections = document.querySelectorAll('#content > div');
-              allSections.forEach(function(section) {
-                section.classList.add('hidden');
-              });
-          
-              // 显示选择的内容
-              var selectedSection = document.getElementById(sectionId);
-              selectedSection.classList.remove('hidden');
-            }
-        </script>
-    </body>
+    #firework {
+      width: 20px;
+      height: 20px;
+      background-color: #f00;
+      border-radius: 50%;
+      position: absolute;
+      opacity: 0;
+      animation: explode 0.5s ease-out forwards;
+    }
+
+    @keyframes explode {
+      to {
+        width: 200px;
+        height: 200px;
+        margin-left: -100px;
+        margin-top: -100px;
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="firework"></div>
+
+  <script>
+    document.addEventListener('click', function(event) {
+      const firework = document.getElementById('firework');
+      firework.style.left = event.pageX + 'px';
+      firework.style.top = event.pageY + 'px';
+      firework.style.opacity = 1;
+    });
+  </script>
+</body>
 </html>
