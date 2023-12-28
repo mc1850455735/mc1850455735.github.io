@@ -15,21 +15,47 @@ p {
 /* ************************************************************************ */
 .headline{
     background-color:#0ae9e9;
-    padding: 10px; /* ÄÚ±ß¾à */
+    padding: 10px; /* å†…è¾¹è· */
 }
 
-/* µ¼º½Á´½ÓÑùÊ½ */
+/* å¯¼èˆªé“¾æ¥æ ·å¼ */
 .headline a {
-    color:#f0f8ff; /* Á´½ÓÎÄ±¾ÑÕÉ« */
-    text-decoration: none; /* È¥³ıÏÂ»®Ïß */
-    padding: 10px 10px; /* Á´½ÓÄÚ±ß¾à */
-    margin: 0 5px; /* Á´½ÓÖ®¼äµÄÍâ±ß¾à */
-    font-weight: bold; /* ×ÖÌå¼Ó´Ö */
-    transition: background-color 0.3s; /* Ìí¼Ó±³¾°ÑÕÉ«¹ı¶ÉĞ§¹û */
+    color:#f0f8ff; /* é“¾æ¥æ–‡æœ¬é¢œè‰² */
+    text-decoration: none; /* å»é™¤ä¸‹åˆ’çº¿ */
+    padding: 10px 10px; /* é“¾æ¥å†…è¾¹è· */
+    margin: 0 5px; /* é“¾æ¥ä¹‹é—´çš„å¤–è¾¹è· */
+    font-weight: bold; /* å­—ä½“åŠ ç²— */
+    transition: background-color 0.3s; /* æ·»åŠ èƒŒæ™¯é¢œè‰²è¿‡æ¸¡æ•ˆæœ */
 }
 
 
 /* ************************************************************************ */
+#sideMenu {
+    width: 15%;
+    background-color: #f9f8e9;
+    vertical-align:top;
+}
+
+#sideMenu p {
+    text-align: center;
+    border-radius: 2px;
+    border-bottom: 2px solid #e4e1d1;
+    margin:5px 15px 5px;
+}
+
+#sideMenu p a {
+    color: #444444;
+    text-decoration: none; /* å»é™¤ä¸‹åˆ’çº¿ */
+    font-weight: normal;
+}
+
+#sideMebu a:hover {
+    color: #2e2e2e;
+    font-weight: bold;
+}
+
+/* ***************************************************************************************** */
+
 .onPCFont{
     width: 65%;
     margin: 0 auto;
@@ -64,7 +90,7 @@ p {
 
 
 /* ************************************************************************ */
-/* »¬¶¯Í¼Æ¬Õ¹Ê¾ */
+/* æ»‘åŠ¨å›¾ç‰‡å±•ç¤º */
 #slider {
     overflow: hidden;
     width: 80%;
@@ -80,14 +106,14 @@ p {
 }
 
 #slider p {
-    padding: 10px 10px; /* Á´½ÓÄÚ±ß¾à */
-    margin: 0 5px; /* Á´½ÓÖ®¼äµÄÍâ±ß¾à */
-    font-weight: bold; /* ×ÖÌå¼Ó´Ö */
+    padding: 10px 10px; /* é“¾æ¥å†…è¾¹è· */
+    margin: 0 5px; /* é“¾æ¥ä¹‹é—´çš„å¤–è¾¹è· */
+    font-weight: bold; /* å­—ä½“åŠ ç²— */
 }
 
 #slides {
     display: flex;
-    /* ÉèÖÃ´¹Ö±¾ÓÖĞ */
+    /* è®¾ç½®å‚ç›´å±…ä¸­ */
     text-align: center;
 
     transition: transform 0.5s ease-in-out;

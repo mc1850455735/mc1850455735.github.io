@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var preDisplay = document.getElementById("preDisplay")
+    var preDisplay = document.getElementById("preDisplay");
+    var sideMenu = document.getElementById("sideMenu");
 
     if (mainDisplay !== null) {
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             console.log("on mobile side");
             preDisplay.classList.add("onMobileFont");
+            sideMenu.style.display = "none";
         } else {
             console.log("on PC side");
             preDisplay.classList.add("onPCFont");
@@ -13,3 +15,22 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Element with ID 'mainDisplay' not found");
     }
 });
+
+function changeShowLetter(n) {
+    var target = "letter" + n;
+    var showLetter = document.getElementById(target);
+
+    var container = document.getElementById("mainDisplay");
+    var children = container.querySelectorAll("*"); 
+    for (var i = 0; i < children.length; i++) {
+        children[i].style.display = "none";
+    }
+
+    console.log(children.length);
+
+    showLetter.style.display = "block";
+    var children = showLetter.querySelectorAll("*"); 
+    for (var i = 0; i < children.length; i++) {
+        children[i].style.display = "flow";
+    }
+}
