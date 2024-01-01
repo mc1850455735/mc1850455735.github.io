@@ -1,42 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>烟花绽放</title>
-  <link rel="stylesheet" href="../main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固定悬浮按钮</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 添加一个样式类，用于设置按钮的样式 */
+        .floating-button {
+            position: fixed; /* 使按钮在视口中固定位置 */
+            bottom: 20px; /* 距离底部的距离 */
+            right: 20px; /* 距离右侧的距离 */
+            background-color: #3498db; /* 按钮背景颜色 */
+            color: #fff; /* 按钮文字颜色 */
+            border: none; /* 移除按钮边框 */
+            padding: 15px 20px; /* 按钮内边距 */
+            border-radius: 50%; /* 将按钮设置为圆形 */
+            cursor: pointer; /* 添加指针样式，表示可以点击 */
+        }
+    </style>
 </head>
 <body>
 
-  <div class="headline">
-    <a href="../index.html">首页</a>
-    <a id="myLink" href="../letters/loveletter1.html" onclick="showConfirmation(); return false;" >情书页</a>
-    <a href="../photowall/main.html">关于我们</a>
-    <!-- <a href="../happy_christmas.html">圣诞快乐</a> -->
-</div>
+    <!-- 添加一个按钮元素，并为其应用上述样式类 -->
+    <button class="floating-button">按钮</button>
 
-  <table width="100%" border="0">
-    <tr>
-    <td colspan="2" style="background-color:#FFA500; padding: 10px;">
-    <h1>主要的网页标题</h1>
-    </td>
-    </tr>
-    
-    <tr>
-    <td style="background-color:#FFD700;width:100px;vertical-align:top;">
-    <b>菜单</b><br>
-    HTML<br>
-    CSS<br>
-    JavaScript
-    </td>
-    <td style="background-color:#eeeeee;height:200px;width:400px;vertical-align:top;">
-    内容在这里</td>
-    </tr>
-    
-    <tr>
-    <td colspan="2" style="background-color:#FFA500;text-align:center;">
-    版权 © runoob.com</td>
-    </tr>
-    </table>
+    <!-- 此处可以添加其他页面内容 -->
+
 </body>
 </html>

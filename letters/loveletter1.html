@@ -16,8 +16,14 @@
         <!-- <a href="../happy_christmas.html">圣诞快乐</a> -->
     </div>
 
+    <!-- id为addMenu,默认不显示 -->
+    <div id="addMenu" class="headline" style="background-color: #00e5ff; border-top: 1px solid gray; display: none;">
+      <a onclick="showmoreletter(); return false;">展示更多</a>
+    </div>
+
     <table>
         <tr>
+          <!-- id为sideMenu,默认显示,手机端不显示 -->
             <td id="sideMenu">
               <p><a href="#" id="toletter1" onclick="changeShowLetter(1);return false;">其一</a></p>
               <p><a href="#" id="toletter2" onclick="changeShowLetter(2);return false;">其二</a></p>
