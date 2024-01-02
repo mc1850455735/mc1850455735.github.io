@@ -26,24 +26,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-function changeShowLetter(n) {
+function  changeShowLetter(n) {
     var target = "letter" + n;
     var showLetter = document.getElementById(target);
 
-    var container = document.getElementById("mainDisplay");
-    var children = container.querySelectorAll("*"); 
-    for (var i = 0; i < children.length; i++) {
-        children[i].style.display = "none";
-    }
+    const N = 3;
+    const letters = [
+        document.getElementById('letter1'),
+        document.getElementById('letter2'),
+        document.getElementById('letter3'),
+    ];
 
-    console.log(children.length);
+    // letters 数组所有div都不可见
+    for(var i = 0; i < N; i++)
+    {
+        if(!letters[i])
+            console.log("can not found");
+        else
+            letters[i].style.display = "none";
+    }
 
     showLetter.style.display = "block";
-    var children = showLetter.querySelectorAll("*"); 
-    for (var i = 0; i < children.length; i++) {
-        children[i].style.display = "flow";
-    }
-}
+
+};
 
 function showmoreletter(){
     var sideMenu = document.getElementById("sideMenu");
