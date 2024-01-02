@@ -31,30 +31,18 @@ function changeShowLetter(n) {
     var showLetter = document.getElementById(target);
 
     var container = document.getElementById("mainDisplay");
-
-    if(onPC()){
-        var children = container.querySelectorAll("*"); 
-        for (var i = 0; i < children.length; i++) {
-            children[i].style.display = "none";
-        }
-
-        console.log(children.length);
-
-        showLetter.style.display = "block";
-        var children = showLetter.querySelectorAll("*"); 
-        for (var i = 0; i < children.length; i++) {
-            children[i].style.display = "flow";
-        }
+    var children = container.querySelectorAll("*"); 
+    for (var i = 0; i < children.length; i++) {
+        children[i].style.display = "none";
     }
-    else{
-        var children = container.querySelectorAll("*"); 
-        for (var i = 0; i < children.length; i++) {
-            children[i].style.display = "none";
-        }
 
-        showLetter.style.display = "block";
+    console.log(children.length);
+
+    showLetter.style.display = "block";
+    var children = showLetter.querySelectorAll("*"); 
+    for (var i = 0; i < children.length; i++) {
+        children[i].style.display = "flow";
     }
-    
 }
 
 function showmoreletter(){
